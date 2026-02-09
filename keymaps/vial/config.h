@@ -30,7 +30,8 @@
 // Encoder Setting
 #define ENCODER_A_PINS { GP8 }
 #define ENCODER_B_PINS { GP9 }
-#define ENCODER_RESOLUTION 4
+#define ENCODER_RESOLUTION 2
+#define NUM_ENCODERS 2
 
 
 // LED Setting
@@ -45,3 +46,4 @@
 #define VIAL_KEYBOARD_UID {0x38, 0x51, 0xC5, 0xF8, 0xE6, 0x22, 0xC0, 0x99}
 #define VIAL_UNLOCK_COMBO_ROWS {0, 1}
 #define VIAL_UNLOCK_COMBO_COLS {0, 1}
+#define ENCODERS_PAD { GP8, GP9 }

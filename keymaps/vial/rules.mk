@@ -1,5 +1,6 @@
 # VIA
-VIA_ENABLE = yes
-VIAL_ENABLE = yes
-VIAL_INSECURE = yes
+VIA_ENABLE         = yes
+VIAL_ENABLE        = yes
+ENCODER_MAP_ENABLE = yes
+ENCODER_ENABLE = yes
 VIAL_ENCODER_ENABLE = yes
