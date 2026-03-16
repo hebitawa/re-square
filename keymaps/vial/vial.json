@@ -1,6 +1,6 @@
 {
   "name": "resquare",
-  "vendorId": "0x0000",
+  "vendorId": "0x1209",
   "productId": "0x4EB1",
   "lighting": "none",
   "matrix": {
@@ -9,10 +9,6 @@
   },
   "encoders": 2,
   "layouts": {
-    "labels": [
-        ["Left EX1",  "Key", "Encoder", "None"],
-        ["Right EX1", "Key", "Encoder", "None"]
-    ],
     "keymap": [
      [
        "0,0",
