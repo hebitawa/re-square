@@ -12,7 +12,8 @@ enum custom_keycodes {
     CPI_NEXT = SAFE_RANGE,
     TB_PRECISION,
     TB_SCROLL,
-	/*TB_SWAP*/
+    /*TB_SWAP,*/
+    TB_DUAL
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -28,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_4, KC_5, KC_6, KC_F4, KC_F5, KC_F6, KC_F4, KC_F5, KC_F6, KC_4, KC_5, KC_6,
 		KC_1, KC_2, KC_3, KC_F1, KC_F2, KC_F3, KC_F1, KC_F2, KC_F3, KC_1, KC_2, KC_3,
 		KC_0, KC_F10, KC_DOT, ____, KC_F11, ____, ____, ____, KC_F12,
-		KC_F10, KC_F11, KC_F12, ____, KC_DOT, KC_0, ____, ____, ____
+		KC_F10, KC_F11, KC_F12, ____, ____, KC_0, ____, KC_DOT, ____
 	),
 	[2] = LAYOUT(
 		____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____,
@@ -39,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	),
 	[3] = LAYOUT(
 		CPI_NEXT, TB_SCROLL, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____,
-		____, ____, ____, ____, TB_PRECISION, ____, ____, MS_BTN1, MS_BTN2, ____, ____, ____,
+		TB_DUAL, ____, ____, ____, TB_PRECISION, ____, ____, MS_BTN1, MS_BTN2, ____, ____, ____,
 		____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____, ____,
 		____, ____, ____, ____, ____, ____, ____, ____, ____,
 		____, ____, ____, ____, ____, ____, ____, ____, ____
@@ -69,6 +70,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case TB_SCROLL:
             if (record->event.pressed) {
                 trackball_scroll_toggle();
+            }
+            return false;
+
+		case TB_DUAL:
+            if (record->event.pressed) {
+                trackball_dual_cursor_toggle();
             }
             return false;
 
