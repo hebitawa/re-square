@@ -1,5 +1,3 @@
-![Uploading resquare.jpg…]()
-
 # re-square
 
 Re:Square is a custom DIY split keyboard.
